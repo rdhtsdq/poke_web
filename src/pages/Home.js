@@ -42,12 +42,12 @@ const Home = () => {
         </button>
       </div>
       <div className="flex flex-wrap overflow-y-auto h-[80vh]">
-        {allPokemon.map(pokemon => <Card 
+        {allPokemon.map((pokemon,index) => <Card 
         id={pokemon.id} 
         name={pokemon.name} 
         image={pokemon.sprites.other.dream_world.front_default} 
         type={pokemon.types[0].type.name}
-        key={pokemon.id}
+        key={index}
         
         />)}
       </div>
